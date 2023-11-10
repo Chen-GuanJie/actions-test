@@ -13,10 +13,10 @@ public class SqlInjectionExample {
         Connection conn = null;
         Statement stmt = null;
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" + "user=myuser&password=mypass");
+            // conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" + "user=myuser&password=mypass");
 
-            // Unsafe SQL query constructed by concatenating strings.
-            String query = "SELECT * FROM users WHERE user = '" + user + "' AND password = '" + pass + "'";
+            // // Unsafe SQL query constructed by concatenating strings.
+            // String query = "SELECT * FROM users WHERE user = '" + user + "' AND password = '" + pass + "'";
 
             // stmt = conn.createStatement();
             // stmt.executeQuery(query);
@@ -28,19 +28,19 @@ public class SqlInjectionExample {
             se.printStackTrace();
         } finally {
             // Finally block used to close resources
-            try {
-                if (stmt != null) {
-                    stmt.close();
-                }
-            } catch (SQLException se2) {
-            }
-            try {
-                if (conn != null) {
-                    conn.close();
-                }
-            } catch (SQLException se) {
-                se.printStackTrace();
-            }
+            // try {
+            //     if (stmt != null) {
+            //         stmt.close();
+            //     }
+            // } catch (SQLException se2) {
+            // }
+            // try {
+            //     if (conn != null) {
+            //         conn.close();
+            //     }
+            // } catch (SQLException se) {
+            //     se.printStackTrace();
+            // }
         }
     }
     
