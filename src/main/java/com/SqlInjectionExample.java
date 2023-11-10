@@ -18,8 +18,8 @@ public class SqlInjectionExample {
             // Unsafe SQL query constructed by concatenating strings.
             String query = "SELECT * FROM users WHERE user = '" + user + "' AND password = '" + pass + "'";
 
-            stmt = conn.createStatement();
-            stmt.executeQuery(query);
+            // stmt = conn.createStatement();
+            // stmt.executeQuery(query);
 
             // ...
 
